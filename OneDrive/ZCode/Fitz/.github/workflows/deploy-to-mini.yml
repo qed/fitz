@@ -1,0 +1,12 @@
+name: Deploy to Mini
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Pull latest
+        run: cd /Users/fitz/fitz && git pull
